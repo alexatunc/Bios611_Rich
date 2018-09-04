@@ -1,0 +1,66 @@
+---
+title: "INLS624_Lab2_Rich"
+author: "Alex Rich"
+date: "8/28/2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r load}
+Arbuthnot=read.csv("/Users/alex/Downloads/Arbuthnot.csv")
+Arbuthnot$Males
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r plot1, echo=FALSE}
+plot(Arbuthnot$Year,Arbuthnot$Males)                                  # point
+
+```
+```{r plot2, echo=FALSE}
+plot(Arbuthnot$Males,Arbuthnot$Females)                           # point
+
+```
+```{r plot3, echo=FALSE}
+plot(x=Arbuthnot$Year,y=Arbuthnot$Males,type="h")           #histogram
+```
+
+```{r plot4, echo=FALSE}
+plot(x=Arbuthnot$Year,y=Arbuthnot$Males,type="l")            #line
+```
+```{r maleProportion, echo=FALSE}
+Arbuthnot$Males/(Arbuthnot$Males+Arbuthnot$Females)
+```
+```{r plot6, echo=FALSE}
+plot(Arbuthnot$Year,Arbuthnot$Males/(Arbuthnot$Males+Arbuthnot$Females), type="l")
+```
+```{r plot5, echo=FALSE}
+plot(Arbuthnot$Year,Arbuthnot$Males/(Arbuthnot$Males+Arbuthnot$Females), type="l", ylab="MaleRatio")
+```
+```{r maleRatio, echo=FALSE}
+MaleRatio <-  Arbuthnot$Males/(Arbuthnot$Males+Arbuthnot$Females)
+```
+
+
+
+```{r showMaleRatio, echo=FALSE}
+MaleRatio
+
+```
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

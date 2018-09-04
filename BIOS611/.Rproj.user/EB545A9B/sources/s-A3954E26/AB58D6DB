@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535478836841.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1789755783",
+    "id" : "AB58D6DB",
+    "lastKnownWriteTime" : 1535479771,
+    "last_content_update" : 1535479771463,
+    "path" : "~/Documents/INLS625_Lab2_AlexRich.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "47,11",
+        "last_setup_crc32" : "A3954E26bb338d19",
+        "scrollLine" : "44",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

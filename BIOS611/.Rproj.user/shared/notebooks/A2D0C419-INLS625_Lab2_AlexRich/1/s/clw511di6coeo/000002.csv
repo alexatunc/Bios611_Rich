@@ -1,0 +1,1 @@
+"0","plot(Arbuthnot$Year,Arbuthnot$Males/(Arbuthnot$Males+Arbuthnot$Females), type=""l"")"

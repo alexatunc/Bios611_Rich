@@ -186,18 +186,21 @@ ggplot(data = mpg) +
     Prediction: I expect to see points colored by drivetrain with displacement for x coordinates and highway MPGs for y coordinates.  I expect to see an overlaid regression line of displacement vs. Highway MPG for each drivetrain category, color coded the same as the points.
 
     ```{r}
-
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
+      geom_point() + 
+      geom_smooth(se = FALSE)
+    
     ```
 
 3.  What does `show.legend = FALSE` do?  What happens if you remove it?  
     Why do you think I used it earlier in the chapter?
 
-    Answer: 
+    Answer: show.legend=FALSE (or the null) allow us to remove or display the legend for the visual encoding of a given layer of a visualization
 
     ```{r}
- ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv),show.legend=FALSE) + 
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
       geom_point() + 
-      geom_smooth(se = FALSE)
+      geom_smooth(se = FALSE,show.legend=FALSE)
       
     ```
 
@@ -224,7 +227,7 @@ ggplot(data = mpg) +
       geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))
     ```
 
-    Answer: 
+    Answer: They should look exactly the same because the only difference is where the author is deciding to define elements that are common to both layers of each plot.
 
     ```{r}
 
@@ -238,7 +241,7 @@ ggplot(data = mpg) +
     Answer: 
     
     ```{r, echo=TRUE, eval=TRUE}
-
+ggplot(data=mpg, mapping = (x=displ,y=hwy))
     ```
 
 
